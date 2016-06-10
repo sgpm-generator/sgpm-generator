@@ -1,0 +1,27 @@
+<footer class="row">
+<div class="col-sm-4">
+<h5 style="margin:0;font-weight:600;">©2016 {{ site.title }}</h5>
+</div>
+<div class="col-sm-4">
+  <ul class="no-bullets">
+  <!-- contact -->
+    <li><strong>email: </strong><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+  <!-- social media -->
+    {% if site.github_username %}
+    <li>
+      {% include icon-github.html username=site.github_username %}
+    </li>
+    {% endif %}
+
+    {% if site.twitter_username %}
+    <li>
+      {% include icon-twitter.html username=site.twitter_username %}
+    </li>
+    {% endif %}
+  </ul>
+</div>
+<div class="col-sm-4">
+<p class="small">{{ site.description }}</p>
+</div>
+</footer>
+

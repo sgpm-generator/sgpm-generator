@@ -1,0 +1,27 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Singapore Gurkha Photography Museum
+email: mail@zakariazainal.com
+description: > # this means to ignore newlines until "baseurl:"
+  The Singapore Gurkha Photography Museum project is an online archive of photographs and documents contributed by former members of the Singapore Gurkhas.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://sgpm-generator.github.io" # the base hostname & protocol for your site
+instagram_username: our.gurkhas
+
+# Build settings
+markdown: kramdown
+destination: ./sgpm-generator.github.io
+
+permalink: /:categories/:slug.html
+
+#page_gen:
+#  - data: sgpm-extended
+#    name: FileName
+#    template: sgpm-default-display
+#    dir: sgpm

@@ -1,0 +1,75 @@
+<header class="row">
+
+
+<!-- masthead -->
+	<div class="col-xs-4" style="display:table-block;">
+		<h1 class="sgpm-title hidden-xs hidden-sm"><strong><a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a></strong></h1>
+		<h2 class="sgpm-title visible-sm"><strong><a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a></strong></h2>
+		<h3 class="sgpm-title visible-xs"><strong><a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a></strong></h3>
+		<!-- searchbar-->
+		<div class="">
+		    <div class="input-group">
+		      <input type="text" class="form-control" placeholder="Search for...">
+		      <span class="input-group-btn">
+		        <button class="btn btn-default" type="button"><span class="hidden-xs">Search</span><span class="visible-xs">Go</span></button>
+		      </span>
+		    </div>
+		</div>
+		<!-- searchbar end -->
+	</div>
+<!-- masthead end --> 
+
+<nav class="col-xs-4 col-xs-offset-2 col-sm-offset-1">
+<ul class="nav col-xs-12" style="padding-top:1.41em;border-left:solid 0.3px #aaa" >
+    <!-- navlinks -->
+    {% if page.url -- "/about.html" %}
+    <li class="active">
+        {% else %}
+        <li>
+        {% endif %}
+        <a href="/about.html">About</a>
+    </li>
+    {% if page.url -- "/archive.html" %}
+    <li class="active">
+        {% else %}
+        <li>
+        {% endif %}
+        <a href="/archive.html">Archive</a>
+    </li>
+     {% if page.url -- "/articles.html" %}
+    <li class="active">
+        {% else %}
+        <li>
+        {% endif %}
+        <a href="/articles.html">Articles</a>
+    </li>
+     {% if page.url -- "/contact.html" %}
+    <li class="active">
+        {% else %}
+        <li>
+        {% endif %}
+        <a href="/contact.html">Contact</a>
+    </li>
+    <!-- navlinks end-->
+    
+    <!-- dev links -->
+    <li class="small">(these are links for development)</li>
+    {% if page.url -- "/sgpm-list.html" %}
+    <li class="active">
+        {% else %}
+        <li>
+        {% endif %}
+        <a href="/sgpm-list.html">Brute Force List</a>
+    </li>
+    {% if page.url -- "/basic-generator.html" %}
+    <li class="active">
+        {% else %}
+        <li>
+        {% endif %}
+        <a href="/basic-generator.html">Brute Generator</a>
+    </li>
+    <!-- dev links end-->
+</ul>
+</nav>
+
+</header>

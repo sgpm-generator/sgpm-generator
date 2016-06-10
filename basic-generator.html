@@ -1,0 +1,34 @@
+---
+layout: default
+title: SGPM Basic Generator
+---
+
+<div class="home">
+
+  <h1>{{ page.title }}</h1>
+  <pre>
+  Todo:
+  - fix uneven reflow of columns
+  - try for infinite scroll
+  - try for sorting
+  </pre>
+
+  {% for x in site.data.sgpm %}
+    <section class="col-sm-4">
+    <img class="img-responsive" src="./img/{{ x.FileName }}" />
+    <h3>Photo from: {{ x.CopyrightNotice }}</h3>
+    <p>
+    {{ x.ImageDescription }}
+    </p>
+    <ul style="list-style:none;margin-left:0;">
+    {% for y in site.data.sgpm[0].Keywords %}
+    <a href="/tags/{{y}}" style="padding:3px; display:inline-block; background:#eee; margin-bottom:2px;"><li> {{ y }} </li></a>
+    {% endfor %}
+    </ul>
+    </section>
+  
+{% endfor %}
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+}
+
+</div>

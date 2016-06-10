@@ -1,0 +1,46 @@
+---
+layout: default
+title: Tag
+permalink: /tags/
+---
+
+{% assign rawtags = "" %}
+{% for post in site.pages %}
+    {% assign ttags = post.Keywords | join:'|' | append:'|' %}
+    {% assign rawtags = rawtags | append:ttags %}
+{% endfor %}
+{% assign rawtags = rawtags | split:'|' | sort %}
+
+{% assign tags = "" %}
+{% for tag in rawtags %}
+    {% if tag != "" %}
+        {% if tags == "" %}
+            {% assign tags = tag | split:'|' %}
+        {% endif %}
+        {% unless tags contains tag %}
+            {% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+        {% endunless %}
+    {% endif %}
+{% endfor %}
+
+<h1>Tagxperiment</h1>
+{% assign sgpm = site.data.sgpm %}
+<ul class="col-sm-12">
+    <li>
+    <img class="img-responsive" src="../img/{{ sgpm[0].FileName }}" />
+    </li>
+    <li>
+    {{ sgpm[0].ImageDescription }}
+    </li>
+</ul>
+<ul>
+    
+    {% assign page.tags = sgpm[0].Keywords %}
+    {{ page.tags }}
+</ul>
+<ul>
+<li>Site Keywords</li>
+{% for x in page.Keywords %}
+<li>{{ x }}</li>
+{% endfor %}
+</ul>
