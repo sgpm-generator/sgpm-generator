@@ -16,7 +16,7 @@ instagram_username: our.gurkhas
 
 # Build settings
 markdown: kramdown
-destination: ./sgpm-generator.github.io
+destination: ../sgpm-generator.github.io
 
 permalink: /:categories/:slug.html
 
